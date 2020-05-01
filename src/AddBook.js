@@ -1,6 +1,7 @@
 import React from "react";
 import * as BooksAPI from "./utils/BooksAPI";
 import Book from "./components/Book";
+import PropTypes from "prop-types";
 
 import SearchBar from "./components/SearchBar";
 
@@ -66,5 +67,10 @@ class AddBook extends React.Component {
     );
   }
 }
+
+AddBook.propTypes = {
+  library: PropTypes.array.isRequired,
+  onMove: PropTypes.func.isRequired,
+};
 
 export default AddBook;

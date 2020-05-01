@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
-const SearchBar = (props) => {
+const SearchBar = ({search}) => {
   const handleSearch = (e) => {
     const value = e.target.value;
-    props.search(value);
+    search(value);
   };
 
   return (
@@ -21,6 +22,10 @@ const SearchBar = (props) => {
       </div>
     </div>
   );
+};
+
+SearchBar.propTypes = {
+  search: PropTypes.func.isRequired,
 };
 
 export default SearchBar;

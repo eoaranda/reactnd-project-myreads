@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const Filters = ({ shelves, onFilter, selected }) => {
   const selectFilter = (shelfId) => {
@@ -24,6 +25,12 @@ const Filters = ({ shelves, onFilter, selected }) => {
       </div>
     </div>
   );
+};
+
+Filters.propTypes = {
+  shelves: PropTypes.array.isRequired,
+  selected: PropTypes.array.isRequired,
+  onFilter: PropTypes.func.isRequired,
 };
 
 export default Filters;

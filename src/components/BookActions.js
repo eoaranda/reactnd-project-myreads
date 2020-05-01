@@ -26,6 +26,7 @@ const BookActions = ({ shelf, onMove, book }) => {
 BookActions.propTypes = {
   shelf: PropTypes.string.isRequired,
   book: PropTypes.object.isRequired,
+  onMove: PropTypes.func.isRequired,
 };
 
 export default BookActions;

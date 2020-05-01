@@ -2,6 +2,7 @@ import React from "react";
 import BookShelf from "./components/BookShelf";
 import { Link } from "react-router-dom";
 import Filter from "./components/Filter";
+import PropTypes from "prop-types";
 
 const ListBooks = ({ shelves, library, onMove, onFilter, shelfFilter }) => {
   const filteredOutShelves =
@@ -32,6 +33,14 @@ const ListBooks = ({ shelves, library, onMove, onFilter, shelfFilter }) => {
       </div>
     </div>
   );
+};
+
+ListBooks.propTypes = {
+  shelves: PropTypes.array.isRequired,
+  library: PropTypes.array.isRequired,
+  onFilter: PropTypes.func.isRequired,
+  onMove: PropTypes.func.isRequired,
+  shelfFilter: PropTypes.array.isRequired,
 };
 
 export default ListBooks;

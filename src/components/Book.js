@@ -1,5 +1,6 @@
 import React from "react";
 import BookActions from "./BookActions";
+import PropTypes from "prop-types";
 
 const Book = ({ book, onMove, shelf }) => {
   const thumbnail = book.imageLinks
@@ -24,6 +25,12 @@ const Book = ({ book, onMove, shelf }) => {
       </div>
     </div>
   );
+};
+
+Book.propTypes = {
+  shelf: PropTypes.string.isRequired,
+  book: PropTypes.object.isRequired,
+  onMove: PropTypes.func.isRequired,
 };
 
 export default Book;
